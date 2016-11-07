@@ -24,6 +24,10 @@ describe 'Rectangle' do
   it 'has setters for @side_length' do
     expect { subject.side_length = 4 }.not_to raise_error
   end
+
+  it 'has the correct area' do
+    expect(subject.calculate_area).to eq(40)
+  end
 end
 
   # describe ".calculate_area" do
