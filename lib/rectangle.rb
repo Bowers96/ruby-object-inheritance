@@ -5,7 +5,7 @@ class Rectangle < Shape
     @height = height
     @width = width
     @num_sides = 4
-    @side_length = Math.sqrt(@height**2 + @width**2)
+    @side_length = [height, width]
   end
 
   def calculate_area

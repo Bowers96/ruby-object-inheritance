@@ -28,6 +28,17 @@ describe 'Rectangle' do
   it 'has the correct area' do
     expect(subject.calculate_area).to eq(40)
   end
+
+  describe '@color' do
+    it 'is not set on initialization' do
+      expect(subject.instance_variables).not_to include(:@color)
+    end
+
+    it 'is set after assignment' do
+      subject.color = 'red'
+      expect(subject.instance_variables).to include(:@color)
+    end
+  end
 end
 
   # describe ".calculate_area" do
